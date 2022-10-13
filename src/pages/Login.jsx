@@ -44,42 +44,45 @@ class Login extends Component {
   render() {
     const { email, name, isBtnDisabled } = this.state;
     return (
-      <form className="login-form">
-        <h2>Login</h2>
-        <input
-          type="text"
-          name="name"
-          data-testid="input-player-name"
-          id="name"
-          value={ name }
-          onChange={ this.handleChanges }
-          placeholder="nome"
-        />
-        <input
-          type="text"
-          name="email"
-          data-testid="input-gravatar-email"
-          id="email"
-          value={ email }
-          onChange={ this.handleChanges }
-          placeholder="email"
-        />
-        <button
-          data-testid="btn-play"
-          type="button"
-          disabled={ isBtnDisabled }
-          onClick={ this.handleBtnPlay }
-        >
-          Play
-        </button>
-        <button
-          data-testid="btn-settings"
-          type="button"
-          onClick={ this.handleSettings }
-        >
-          Settings
-        </button>
-      </form>
+      <>
+        <h1 className="trivia-text">Trybe Trivia</h1>
+        <form className="login-form">
+          <h2>Login</h2>
+          <input
+            type="text"
+            name="name"
+            data-testid="input-player-name"
+            id="name"
+            value={ name }
+            onChange={ this.handleChanges }
+            placeholder="nome"
+          />
+          <input
+            type="text"
+            name="email"
+            data-testid="input-gravatar-email"
+            id="email"
+            value={ email }
+            onChange={ this.handleChanges }
+            placeholder="email"
+          />
+          <button
+            data-testid="btn-play"
+            type="button"
+            disabled={ isBtnDisabled }
+            onClick={ this.handleBtnPlay }
+          >
+            Play
+          </button>
+          <button
+            data-testid="btn-settings"
+            type="button"
+            onClick={ this.handleSettings }
+          >
+            Settings
+          </button>
+        </form>
+      </>
     );
   }
 }

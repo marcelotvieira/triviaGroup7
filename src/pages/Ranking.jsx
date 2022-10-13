@@ -28,13 +28,6 @@ class Ranking extends React.Component {
     return (
       <div className="ranking-page">
         <h2 data-testid="ranking-title">Ranking</h2>
-        <button
-          type="button"
-          data-testid="btn-go-home"
-          onClick={ this.handleHome }
-        >
-          Home
-        </button>
         <ul>
           {
             players.sort((player, nextPlayer) => nextPlayer.score - player.score)
@@ -58,6 +51,13 @@ class Ranking extends React.Component {
               ))
           }
         </ul>
+        <button
+          type="button"
+          data-testid="btn-go-home"
+          onClick={ this.handleHome }
+        >
+          Home
+        </button>
       </div>
     );
   }
